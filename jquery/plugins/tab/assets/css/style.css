@@ -1,0 +1,28 @@
+ul.myTabHeading {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    background-color: #000;
+    margin: 0;
+}
+
+.myTabHeading li {
+    width: 25%;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.myTabPanel {
+    padding: 10px;
+    border: 1px solid #000;
+    display: none;
+}
+
+.myTabPanel.active{
+    display: block;
+}
+
+.myTabHeading li.active {
+    background-color: orange;
+}

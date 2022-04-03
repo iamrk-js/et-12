@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div id="backdrop"></div>
+    <header class="header">
+        <h1>Favorite Movies</h1>
+        <button class="btn btn-danger" id="addMovieModalBtn">Add Movies</button>
+    </header>
+    <div class="container mt-4">
+        <div class="row" id="moviesInfo">
+           
+        </div>
+    </div>
+    <div id="add-modal" class="myModal">
+        <i class="fas fa-times myClose"></i>
+        <div class="model-content">
+            <div class="form-group">
+                <label for="title">Movie Title</label>
+                <input type="text" name="title" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="image">Image Url</label>
+                <input type="text" name="image" id="image" class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="rating">Your Rating</label>
+                <input type="number" name="rating" 
+                id="rating" 
+                min="1" max="5" 
+                step="1" class="form-control">
+            </div>
+
+        </div>
+        <div class="model-actions">
+            <button class="btn btn-primary myClose" id="addMovie">Add Movie</button>
+            <button class="btn btn-danger myClose">Cancel</button>
+        </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+</body>
+
+</html>

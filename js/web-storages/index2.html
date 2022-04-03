@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let getLocalData = JSON.parse(localStorage.getItem("localdata"));
+        console.log(getLocalData)
+        document.write("<br>")
+        document.write("Information from local storage : ",getLocalData.name);
+
+
+        let getSessiondata = JSON.parse(sessionStorage.getItem("sessiondata"));
+
+        document.write("<br>");
+        document.write("Data from Session Storage : " , getSessiondata.name);
+
+    </script>
+</body>
+</html>

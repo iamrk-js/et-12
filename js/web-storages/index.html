@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- JSON >> javaScript Object Notation -->
+    <!-- <script src="./assets/js/app.js"></script> -->
+    <!-- Web Storages  >> Local and Session -->
+    <a href="index2.html" target="_blank"> Go to Index2.html file</a> <br>
+    <script>
+        let person = {
+            name: "RAvikiran",
+            email: "iamrk@gmail.com",
+            age: 33,
+            canDrive: false
+        }
+
+        let jsonPerson = JSON.stringify(person);
+        
+        localStorage.setItem("localdata", jsonPerson)
+        sessionStorage.setItem("sessiondata", jsonPerson)
+
+        let getLocalData = JSON.parse(localStorage.getItem("localdata"));
+        console.log(getLocalData)
+        document.write(person.name)
+        document.write("<br>")
+        document.write("Information from local storage : ",getLocalData.name);
+
+
+        let getSessiondata = JSON.parse(sessionStorage.getItem("sessiondata"));
+
+        document.write("<br>");
+        document.write("Data from Session Storage : " , getSessiondata.name)
+
+        localStorage.setItem("IronMan", "Tony Strak");
+        console.log(localStorage.length)
+        localStorage.removeItem("IronMan");
+        console.log(localStorage.length)
+
+        
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
